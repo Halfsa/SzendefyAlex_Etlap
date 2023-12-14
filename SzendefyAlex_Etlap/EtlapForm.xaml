@@ -1,0 +1,32 @@
+﻿<Window x:Class="SzendefyAlex_Etlap.EtlapForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzendefyAlex_Etlap"
+        mc:Ignorable="d"
+        Title="EtlapForm" Height="450" Width="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="100"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+			<RowDefinition Height="25"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="200"/>
+		</Grid.ColumnDefinitions>
+
+		<Label Content="Név" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+		<TextBox x:Name="formNev" Grid.Row="0" Grid.Column="1" Text=""/>
+		<Label Content="Leírás" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+		<TextBox x:Name="formLeiras" Grid.Row="1" Grid.Column="1" Text=""/>
+		<Label Content="Kategória" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+		<ComboBox  x:Name="formKategoria" Grid.Row="2" Grid.Column="1" Text=""/>
+		<Label Content="Ár" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+		<TextBox x:Name="formAr" Grid.Row="3" Grid.Column="1" PreviewTextInput="NumberValidationTextBox" Text=""/>
+		<Button Content="Hozzáad" x:Name="btnAdd" Grid.Column="1" Grid.Row="4" Click="btnAdd_Click"/>
+	</Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="SzendefyAlex_Etlap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzendefyAlex_Etlap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<DockPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+				<Button  x:Name="btnUjEtel" Content="Új étel felvétele" Click="btnUjEtel_Click" />
+				<Button  x:Name="btnTorles" Content="Törlés" Margin="10,0,0,0" Click="btnTorles_Click"/>
+				<RadioButton x:Name="radioASC" IsChecked="False" Content="Növekvő" Checked="radioASC_Checked"/>
+				<RadioButton x:Name="radioDESC" IsChecked="False"  Content="Csökkenő" Margin="10,0,0,0" Checked="radioDESC_Checked"/>
+			</StackPanel>
+			
+				<Label Content="Áremelés"/>
+				<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+					<TextBox x:Name="tbPercent" Width="200"  PreviewTextInput="NumberValidationTextBox"/>
+					<Label Content="%"></Label>
+					<Button x:Name="btnPercent" Margin="10,0,0,0" Content="Emelés" Click="btnPercent_Click"/>
+				</StackPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+				<TextBox x:Name="tbForint" Width="200"  PreviewTextInput="NumberValidationTextBox"/>
+				<Label Content="Ft"></Label>
+				<Button x:Name="btnForint" Margin="10,0,0,0" Content="Emelés" Click="btnForint_Click"/>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<DataGrid x:Name="etlap" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=5}" Width="600" SelectionChanged="etlap_SelectionChanged"/>
+				<Label x:Name="lblLeiras"/>
+			</StackPanel>
+		</DockPanel>
+
+	</Grid>
+</Window>
